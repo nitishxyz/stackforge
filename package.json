@@ -1,0 +1,31 @@
+{
+  "name": "stackforge",
+  "module": "index.ts",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "db": "sst shell -- drizzle-kit",
+    "dev:db": "sst shell --stage dev -- drizzle-kit",
+    "dev:tunnel": "sst tunnel --stage dev"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.149",
+    "@types/bun": "latest",
+    "@types/pg": "^8.11.14",
+    "drizzle-kit": "^0.31.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@openauthjs/openauth": "^0.4.3",
+    "drizzle-orm": "^0.43.1",
+    "pg": "^8.15.6",
+    "sst": "3.13.19",
+    "valibot": "^1.0.0",
+    "zod": "^3.24.3"
+  }
+}
