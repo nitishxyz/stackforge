@@ -1,11 +1,11 @@
 import { handle } from "hono/aws-lambda";
 import { issuer } from "@openauthjs/openauth";
 import { MemoryStorage } from "@openauthjs/openauth/storage/memory";
-import { subjects } from "./subjects";
+import { subjects } from "@stackforge/core/auth/subjects";
 import { GithubProvider } from "@openauthjs/openauth/provider/github";
 import { Resource } from "sst";
-import { db } from "@/db/index";
-import { users } from "@/db/schema";
+import { db } from "@stackforge/core/db";
+import { users } from "@stackforge/core/db/schema";
 import { eq } from "drizzle-orm";
 
 async function getUser(id: string) {

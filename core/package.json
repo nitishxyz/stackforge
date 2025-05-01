@@ -1,0 +1,15 @@
+{
+  "name": "@stackforge/core",
+  "type": "module",
+  "version": "0.0.0",
+  "exports": {
+    "./auth/subjects": "./auth/subjects.ts",
+    "./utils": "./utils/stage.ts",
+    "./db": "./db/index.ts",
+    "./db/types": "./db/types.ts",
+    "./db/schema": "./db/schema/index.ts"
+  },
+  "dependencies": {
+    "sst": "*"
+  }
+}

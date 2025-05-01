@@ -1,4 +1,4 @@
-import { DEPLOYED_STAGES } from "../modules/utils/stage";
+import { DEPLOYED_STAGES } from "../core/utils/stage";
 import { vpc } from "./vpc";
 
 export const database = new sst.aws.Postgres("ForgeDatabase", {
