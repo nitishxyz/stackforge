@@ -1,10 +1,10 @@
 import { Resource } from "sst";
 import { defineConfig } from "drizzle-kit";
-import { DEPLOYED_STAGES } from "./modules/utils/stage";
+import { DEPLOYED_STAGES } from "./core/utils/stage";
 
 export default defineConfig({
   dialect: "postgresql",
-  schema: ["./modules/db/schema"],
+  schema: ["./core/db/schema"],
   dbCredentials: {
     host: Resource.ForgeDatabase.host,
     port: Resource.ForgeDatabase.port,

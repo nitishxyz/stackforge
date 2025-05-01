@@ -4,7 +4,8 @@
   "type": "module",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "functions",
+    "core"
   ],
   "scripts": {
     "db": "sst shell -- drizzle-kit",
@@ -24,7 +25,7 @@
     "@openauthjs/openauth": "^0.4.3",
     "drizzle-orm": "^0.43.1",
     "pg": "^8.15.6",
-    "sst": "3.13.19",
+    "sst": "3.11.3",
     "valibot": "^1.0.0",
     "zod": "^3.24.3"
   }
