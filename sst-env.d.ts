@@ -17,6 +17,9 @@ declare module "sst" {
       "type": "sst.aws.Postgres"
       "username": string
     }
+    "ForgePlatform": {
+      "type": "sst.aws.Nextjs"
+    }
     "ForgeVpc": {
       "bastion": string
       "type": "sst.aws.Vpc"

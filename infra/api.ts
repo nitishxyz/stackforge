@@ -1,9 +1,7 @@
 import { auth } from "./auth";
 import { database } from "./database";
 import { domains } from "./domains";
-import { vpc } from "./vpc";
-
-const cluster = new sst.aws.Cluster("ForgeBackendCluster", { vpc });
+import { cluster } from "./cluster";
 
 export const apiService = new sst.aws.Service("ForgeBackendService", {
   cluster,

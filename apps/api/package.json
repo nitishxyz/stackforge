@@ -3,6 +3,10 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "dependencies": {
+    "@stackforge/core": "*",
+    "sst": "*"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },

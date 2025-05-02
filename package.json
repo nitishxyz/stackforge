@@ -8,6 +8,7 @@
     "core"
   ],
   "scripts": {
+    "deploy": "sst deploy --stage dev",
     "db": "sst shell -- drizzle-kit",
     "dev:db": "sst shell --stage dev -- drizzle-kit",
     "dev:tunnel": "sst tunnel --stage dev"
