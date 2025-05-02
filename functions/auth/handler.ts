@@ -33,21 +33,43 @@ async function createUser(id: string, username: string, email: string) {
 }
 
 async function getGithubUser(accessToken: string) {
-  const response = await fetch("https://api.github.com/user", {
+  // Fetch basic user info
+  const userResponse = await fetch("https://api.github.com/user", {
     headers: {
       Authorization: `Bearer ${accessToken}`,
     },
   });
 
-  if (!response.ok) {
+  if (!userResponse.ok) {
     throw new Error("Failed to fetch GitHub user");
   }
 
-  const data = await response.json();
+  const userData = await userResponse.json();
+  let email = userData.email;
+
+  // If email is null, fetch emails separately
+  if (!email) {
+    const emailsResponse = await fetch("https://api.github.com/user/emails", {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (emailsResponse.ok) {
+      const emails = await emailsResponse.json();
+      // Find primary email or take the first verified one
+      const primaryEmail = emails.find((e: any) => e.primary && e.verified);
+      const verifiedEmail = emails.find((e: any) => e.verified);
+
+      email =
+        primaryEmail?.email || verifiedEmail?.email || "no-email@example.com";
+    }
+  }
+
   return {
-    id: data.id.toString(),
-    username: data.login,
-    email: data.email,
+    id: userData.id.toString(),
+    username: userData.login,
+    email,
   };
 }
 
