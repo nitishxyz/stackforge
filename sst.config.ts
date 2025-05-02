@@ -18,12 +18,15 @@ export default $config({
   async run() {
     await import("./infra/secrets");
     const { vpc } = await import("./infra/vpc");
+    const { cluster } = await import("./infra/cluster");
     const { database } = await import("./infra/database");
     await import("./infra/orm");
     await import("./infra/auth");
+    await import("./infra/platform");
 
     return {
       vpcId: vpc.id,
+      clusterId: cluster.id,
       databaseId: database.id,
       databaseProxyId: database.proxyId,
       databaseName: database.database,
