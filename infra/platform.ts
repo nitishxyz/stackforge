@@ -1,11 +1,12 @@
 import { vpc } from "./vpc";
 import { auth } from "./auth";
 import { domains } from "./domains";
+import { database } from "./database";
 
 export const platform = new sst.aws.Nextjs("ForgePlatform", {
   vpc: vpc,
   path: "./apps/platform",
-  link: [auth],
+  link: [auth, database],
   domain: {
     name: domains.platform,
     redirects: [`www.${domains.platform}`],

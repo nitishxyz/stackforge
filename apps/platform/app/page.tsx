@@ -29,6 +29,7 @@ import {
   SiDrizzle,
   SiZod,
   SiAwslambda,
+  SiGithub,
 } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandOpenai } from "react-icons/tb";
 import {
@@ -42,6 +43,9 @@ import {
   FaCloudversify,
   FaCloudDownloadAlt,
 } from "react-icons/fa";
+
+import { ReviewForm } from "@/components/review-form";
+import { SstIcon } from "@/components/assets/icons/sst";
 
 // Hero Section
 function HeroSection() {
@@ -932,30 +936,33 @@ function Footer() {
               applications to AWS.
             </p>
           </div>
-          <div className="flex justify-start md:justify-end items-center gap-6">
+          <div className="flex justify-start md:justify-end items-center gap-8">
             <a
               href="https://github.com/nitishxyz/stackforge"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/80 hover:text-foreground transition-colors"
+              aria-label="GitHub"
             >
-              GitHub
+              <SiGithub size={24} />
             </a>
             <a
               href="https://sst.dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/80 hover:text-foreground transition-colors"
+              aria-label="SST"
             >
-              SST
+              <SstIcon width={45} height={24} />
             </a>
             <a
               href="https://aws.amazon.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/80 hover:text-foreground transition-colors"
+              aria-label="AWS"
             >
-              AWS
+              <FaAws size={30} />
             </a>
           </div>
         </div>
@@ -983,6 +990,23 @@ export default function Home() {
         </div>
         <div id="demo">
           <DemoSection />
+        </div>
+        <div className="container mx-auto">
+          {/* Reviews Section */}
+          <section id="reviews" className="py-20">
+            <div className="container px-4 md:px-6 mx-auto">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl font-bold mb-4">Share Your Feedback</h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  Help us improve StackForge by sharing your experience with our
+                  template.
+                </p>
+              </div>
+              <div className="max-w-lg mx-auto">
+                <ReviewForm />
+              </div>
+            </div>
+          </section>
         </div>
         <Footer />
       </div>

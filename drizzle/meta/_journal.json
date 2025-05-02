@@ -8,6 +8,13 @@
       "when": 1746108610355,
       "tag": "0000_cool_mauler",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1746225188217,
+      "tag": "0001_peaceful_night_nurse",
+      "breakpoints": true
     }
   ]
 }
