@@ -32,6 +32,10 @@ declare module "sst" {
       "type": "sst.sst.Secret"
       "value": string
     }
+    "PolarAccessToken": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
   }
 }
 /// <reference path="sst-env.d.ts" />

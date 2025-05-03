@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CreditCard, Star, Zap, Shield, Code, ArrowRight } from "lucide-react";
-
+import { getProductById } from "@/lib/polar-products";
 interface PricingTierProps {
   title: string;
   price: string;
@@ -93,6 +93,7 @@ const PricingTier = ({
 export function PaymentsSection() {
   const supportTiers = [
     {
+      id: "community",
       title: "Community",
       price: "Free",
       description: "Support the project through GitHub contributions",
@@ -108,6 +109,7 @@ export function PaymentsSection() {
       },
     },
     {
+      id: "sponsorship",
       title: "Sponsor",
       price: "$10",
       description: "Fund ongoing development and maintenance",
@@ -120,11 +122,12 @@ export function PaymentsSection() {
       ],
       highlighted: true,
       polar: {
-        url: "https://polar.sh/nitishxyz/subscriptions",
+        url: `checkout?products=${getProductById("sponsorship")?.polar_id}`,
         buttonText: "Become a Sponsor",
       },
     },
     {
+      id: "enterprise",
       title: "Enterprise",
       price: "$99",
       description: "For companies using StackForge in production",
@@ -136,7 +139,7 @@ export function PaymentsSection() {
         "Commercial use license",
       ],
       polar: {
-        url: "https://polar.sh/nitishxyz/subscriptions/enterprise",
+        url: `checkout?products=${getProductById("enterprise")?.polar_id}`,
         buttonText: "Subscribe",
       },
     },
@@ -144,6 +147,7 @@ export function PaymentsSection() {
 
   const serviceTiers = [
     {
+      id: "consultation",
       title: "Consultation",
       price: "$200",
       description: "Expert guidance for your SST-powered project",
@@ -155,11 +159,12 @@ export function PaymentsSection() {
         "Follow-up summary report",
       ],
       polar: {
-        url: "https://polar.sh/nitishxyz/products/consultation",
+        url: `checkout?products=${getProductById("consultation")?.polar_id}`,
         buttonText: "Book Session",
       },
     },
     {
+      id: "custom",
       title: "Custom Development",
       price: "Custom",
       description: "Professional development services for your project",
