@@ -16,6 +16,13 @@ import {
 } from "./ui/dropdown-menu";
 import { Github, User } from "lucide-react";
 
+const STAGE = process.env.NEXT_PUBLIC_STAGE;
+
+const PORTAL_URL =
+  STAGE === "prod"
+    ? "https://polar.sh/slashforge/portal"
+    : "https://sandbox.polar.sh/slashforge/portal";
+
 export function Navbar() {
   const { user, isLoading, isAuthenticated } = useAuth();
 
@@ -42,6 +49,11 @@ export function Navbar() {
                     <DropdownMenuContent align="end">
                       <DropdownMenuLabel>My Account</DropdownMenuLabel>
                       <DropdownMenuSeparator />
+                      <DropdownMenuItem>
+                        <Link href={PORTAL_URL} className="w-full text-left">
+                          Manage Subscription
+                        </Link>
+                      </DropdownMenuItem>
                       <DropdownMenuItem>
                         <form action={logout}>
                           <button type="submit" className="w-full text-left">

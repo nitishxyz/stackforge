@@ -1,6 +1,6 @@
 const SUB = $app.stage === "prod" ? "" : `${$app.stage}.`;
 
-const HOST = "forge.nitish.sh";
+const HOST = "stackforge.xyz";
 
 export const domains = {
   api: `${SUB}api.${HOST}`,
