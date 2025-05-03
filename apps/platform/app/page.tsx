@@ -5,6 +5,7 @@ import { FeaturesSection } from "@/components/FeaturesSection";
 import { ArchitectureSection } from "@/components/ArchitectureSection";
 import { TechnicalSection } from "@/components/TechnicalSection";
 import { DemoSection } from "@/components/DemoSection";
+import { PaymentsSection } from "@/components/PaymentsSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { Footer } from "@/components/Footer";
 
@@ -24,6 +25,9 @@ export default function Home() {
         </div>
         <div id="demo">
           <DemoSection />
+        </div>
+        <div id="support">
+          <PaymentsSection />
         </div>
         <div className="container mx-auto">
           <ReviewsSection />
