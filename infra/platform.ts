@@ -16,8 +16,8 @@ export const platform = new sst.aws.Nextjs("ForgePlatform", {
     NEXT_PUBLIC_STAGE: $app.stage,
   },
   buildCommand:
-    "npm install --frozen-lockfile && npx --yes @opennextjs/aws@3.5.3 build",
+    "bun install --frozen-lockfile && bunx --yes @opennextjs/aws@3.5.3 build",
   dev: {
-    command: "npm run dev",
+    command: "bun run dev",
   },
 });
