@@ -24,6 +24,7 @@ export default $config({
     await import("./infra/auth");
     await import("./infra/api");
     await import("./infra/platform");
+    await import("./infra/expo");
 
     return {
       vpcId: vpc.id,
