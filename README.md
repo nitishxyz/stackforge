@@ -1,3 +1,5 @@
+![StackForge Banner](assets/stackforge.png)
+
 # StackForge Monorepo Template
 
 Welcome to StackForge! This is a comprehensive monorepo template designed to help you kickstart your full-stack application development using [SST (Serverless Stack Toolkit)](https://sst.dev/). It provides a structured and scalable foundation for building modern web and mobile experiences, all powered by Bun.
