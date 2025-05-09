@@ -1,6 +1,6 @@
 import { Resource } from "sst";
 import { createClient } from "@openauthjs/openauth/client";
-import { subjects } from "../../../core/auth/subjects";
+import { subjects } from "@stackforge/core/auth/subjects";
 import type { SubjectSchema } from "@openauthjs/openauth/subject";
 import type { VerifyResult, VerifyError } from "@openauthjs/openauth/client";
 import { InvalidAccessTokenError } from "@openauthjs/openauth/error";

@@ -6,7 +6,7 @@ import { vpc } from "./vpc";
 export const auth = new sst.aws.Auth("ForgeAuth", {
   domain: domains.auth,
   authorizer: {
-    handler: "functions/auth/handler.handler",
+    handler: "packages/functions/auth/handler.handler",
     link: [githubClientId, githubClientSecret, database],
     timeout: "3 minutes",
     vpc: vpc,

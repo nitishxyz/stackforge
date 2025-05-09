@@ -1,6 +1,6 @@
 import { Resource } from "sst";
 import { defineConfig } from "drizzle-kit";
-import { DEPLOYED_STAGES } from "./core/utils/stage";
+import { DEPLOYED_STAGES } from "./packages/core/utils/stage";
 
 export default defineConfig({
   dialect: "postgresql",
