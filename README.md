@@ -18,7 +18,7 @@ StackForge aims to simplify the complexities of modern application development b
 *   **[Next.js](https://nextjs.org/):** Powers the `platform` web application, offering server-side rendering, static site generation, and a rich frontend experience.
 *   **[Expo](https://expo.dev/):** Used for the `mobile` application, enabling rapid local development and iteration for iOS and Android (local development environment only).
 *   **[Hono](https://hono.dev/):** A lightweight and fast web framework, specifically utilized within the authentication service (`packages/functions` or `packages/core/auth`) for auth-related routes. The main API (`apps/api`) leverages Bun's native HTTP server or other Bun-compatible routing.
-*   **[OpenAuth](https://openauth.dev/):** Integrated for robust and flexible authentication.
+*   **[OpenAuth](https://openauth.js.org):** Integrated for robust and flexible authentication.
 *   **[Polar](https://polar.sh/):** SDKs included for integrating payments into your `platform` application.
 *   **[Drizzle ORM](https://orm.drizzle.team/):** A TypeScript ORM for database interactions, providing type safety and a great developer experience.
 *   **Modular Packages:** Shared logic for `core` functionalities and `functions` to keep your codebase DRY and maintainable.
@@ -174,7 +174,6 @@ Database schema changes are managed using Drizzle Kit.
         ```bash
         bun dev:db migrate
         ```
-    *   **Note on Deployed Environments:** While you can manually apply migrations to deployed stages using the tunnel and scripts above, SST also supports running migration scripts automatically during deployment using `Job` or `Script` resources in your `infra` definitions. This template primarily focuses on local-first and script-driven remote migrations.
 
 Refer to `drizzle.config.ts` for Drizzle Kit settings and `package.json` for the full `db:*` and `dev:db:*` scripts.
 
@@ -236,7 +235,7 @@ Deploy your application to AWS using SST.
 *   **[Next.js Documentation](https://nextjs.org/docs)**
 *   **[Expo Documentation](https://docs.expo.dev/)**
 *   **[Polar Documentation](https://polar.sh/docs)**
-*   **[OpenAuth Documentation](https://openauth.dev/getting-started/introduction)**
+*   **[OpenAuth Documentation](https://openauth.js.org)**
 *   **[Drizzle ORM Documentation](https://orm.drizzle.team/docs/overview)**
 *   **[Hono Documentation](https://hono.dev/getting-started/basic)**
 
