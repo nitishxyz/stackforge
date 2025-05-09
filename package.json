@@ -4,8 +4,7 @@
   "type": "module",
   "workspaces": [
     "apps/*",
-    "functions",
-    "core"
+    "packages/*"
   ],
   "scripts": {
     "deploy": "sst deploy --stage dev",

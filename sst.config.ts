@@ -22,6 +22,7 @@ export default $config({
     const { database } = await import("./infra/database");
     await import("./infra/orm");
     await import("./infra/auth");
+    await import("./infra/api");
     await import("./infra/platform");
 
     return {

@@ -5,8 +5,17 @@
 
 declare module "sst" {
   export interface Resource {
+    "ForgeApiRouter": {
+      "type": "sst.aws.Router"
+      "url": string
+    }
     "ForgeAuth": {
       "type": "sst.aws.Auth"
+      "url": string
+    }
+    "ForgeBackendService": {
+      "service": string
+      "type": "sst.aws.Service"
       "url": string
     }
     "ForgeDatabase": {
