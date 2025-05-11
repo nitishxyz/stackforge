@@ -4,7 +4,7 @@ import { DEPLOYED_STAGES } from "./packages/core/utils/stage";
 
 export default defineConfig({
   dialect: "postgresql",
-  schema: ["./core/db/schema"],
+  schema: ["./packages/core/db/schema"],
   dbCredentials: {
     host: Resource.ForgeDatabase.host,
     port: Resource.ForgeDatabase.port,
