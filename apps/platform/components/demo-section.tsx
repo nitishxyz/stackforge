@@ -30,7 +30,7 @@ export function DemoSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="space-y-8"
+            className="space-y-8 min-w-0"
           >
             <div>
               <h3 className="text-2xl font-semibold mb-4">

@@ -28,57 +28,55 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
-        <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            {/* StackForge text removed */}
-          </Link>
-        </div>
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <nav className="flex items-center">
-            <div className="flex items-center gap-4">
-              {!isLoading ? (
-                isAuthenticated ? (
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="outline" size="sm" className="gap-2">
-                        <User className="h-4 w-4" />
-                        {user?.username}
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                      <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                      <DropdownMenuSeparator />
-                      <DropdownMenuItem>
-                        <Link href={PORTAL_URL} className="w-full text-left">
-                          Manage Subscription
-                        </Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        <form action={logout}>
-                          <button type="submit" className="w-full text-left">
-                            Logout
-                          </button>
-                        </form>
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                ) : (
-                  <form action={login}>
-                    <Button type="submit" size="sm" className="gap-2">
-                      <Github className="h-4 w-4" />
-                      Login with GitHub
+      <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-14 items-center justify-between">
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              {/* StackForge text removed */}
+            </Link>
+          </div>
+          <div className="flex items-center gap-4">
+            {!isLoading ? (
+              isAuthenticated ? (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="outline" size="sm" className="gap-2">
+                      <User className="h-4 w-4" />
+                      {user?.username}
                     </Button>
-                  </form>
-                )
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>
+                      <Link href={PORTAL_URL} className="w-full text-left">
+                        Manage Subscription
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <form action={logout}>
+                        <button type="submit" className="w-full text-left">
+                          Logout
+                        </button>
+                      </form>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               ) : (
-                <Button variant="outline" size="sm" disabled>
-                  Loading...
-                </Button>
-              )}
-              <ThemeToggle />
-            </div>
-          </nav>
+                <form action={login}>
+                  <Button type="submit" size="sm" className="gap-2">
+                    <Github className="h-4 w-4" />
+                    Login with GitHub
+                  </Button>
+                </form>
+              )
+            ) : (
+              <Button variant="outline" size="sm" disabled>
+                Loading...
+              </Button>
+            )}
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>

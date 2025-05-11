@@ -119,7 +119,7 @@ export function TechnicalSection() {
                   ))}
                 </ul>
               </div>
-              <div className="rounded-lg bg-foreground/5 p-6 font-mono text-sm overflow-auto">
+              <div className="rounded-lg bg-foreground/5 p-6 font-mono text-sm overflow-auto min-w-0">
                 <div className="flex items-center gap-2 mb-4">
                   <SiBun size={20} />
                   <span className="font-semibold">SST + Bun Workflow</span>
@@ -368,7 +368,7 @@ $ bun dev:tunnel           # Create secure tunnel`}
               </h3>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
+              <div className="space-y-4 min-w-0">
                 <p className="text-muted-foreground mb-4">
                   StackForge leverages SST to deploy and manage complex
                   infrastructure with minimal effort.
