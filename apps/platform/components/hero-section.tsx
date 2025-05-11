@@ -44,12 +44,12 @@ export function HeroSection() {
             onClick={() =>
               window.open("https://github.com/nitishxyz/stackforge", "_blank")
             }
-            className="w-[240px] text-center rounded-full border-2 border-solid border-transparent bg-foreground text-background px-8 py-4 text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-foreground/20"
+            className="w-full sm:w-[240px] text-center rounded-full border-2 border-solid border-transparent bg-foreground text-background px-8 py-4 text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-foreground/20"
           >
             Get Started
           </button>
           <button
-            className="w-[240px] rounded-full border-2 border-solid border-foreground/10 px-8 py-4 text-lg font-medium transition-all duration-300 hover:scale-105 hover:bg-foreground/5 hover:border-transparent"
+            className="w-full sm:w-[240px] rounded-full border-2 border-solid border-foreground/10 px-8 py-4 text-lg font-medium transition-all duration-300 hover:scale-105 hover:bg-foreground/5 hover:border-transparent"
             onClick={() => scrollToSection("features")}
           >
             Explore Features

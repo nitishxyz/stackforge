@@ -38,7 +38,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AuthProvider>
-            <div className="relative flex min-h-screen flex-col">
+            <div className="relative flex min-h-screen flex-col overflow-x-hidden">
               <Navbar />
               <main className="flex-1">{children}</main>
             </div>

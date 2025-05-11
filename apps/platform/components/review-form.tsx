@@ -169,7 +169,7 @@ export function ReviewForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="bg-foreground text-background hover:bg-foreground/90 transition-colors"
+          className="w-full bg-foreground text-background hover:bg-foreground/90 transition-colors"
         >
           {isSubmitting ? "Submitting..." : "Submit Review"}
         </Button>
