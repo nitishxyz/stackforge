@@ -112,7 +112,7 @@ export function TechnicalSection() {
                       className="flex items-start gap-3"
                     >
                       <div className="flex-shrink-0 h-6 w-6 rounded-full bg-foreground text-background flex items-center justify-center mt-0.5">
-                        {item.icon}
+                        <div className="scale-75">{item.icon}</div>
                       </div>
                       <span>{item.text}</span>
                     </motion.li>
@@ -204,7 +204,7 @@ $ bun dev:tunnel           # Create secure tunnel`}
                       className="flex items-start gap-3"
                     >
                       <div className="flex-shrink-0 h-6 w-6 rounded-full bg-foreground text-background flex items-center justify-center mt-0.5">
-                        {item.icon}
+                        <div className="scale-75">{item.icon}</div>
                       </div>
                       <span>{item.text}</span>
                     </motion.li>
@@ -275,7 +275,7 @@ $ bun dev:tunnel           # Create secure tunnel`}
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <div className="flex-shrink-0 h-6 w-6 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center mt-0.5">
-                        {item.icon}
+                        <div className="scale-75">{item.icon}</div>
                       </div>
                       <span className="text-muted-foreground">{item.text}</span>
                     </li>
@@ -312,7 +312,7 @@ $ bun dev:tunnel           # Create secure tunnel`}
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <div className="flex-shrink-0 h-6 w-6 rounded-full bg-violet-500/10 text-violet-500 flex items-center justify-center mt-0.5">
-                        {item.icon}
+                        <div className="scale-75">{item.icon}</div>
                       </div>
                       <span className="text-muted-foreground">{item.text}</span>
                     </li>
@@ -343,7 +343,7 @@ $ bun dev:tunnel           # Create secure tunnel`}
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <div className="flex-shrink-0 h-6 w-6 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center mt-0.5">
-                        {item.icon}
+                        <div className="scale-75">{item.icon}</div>
                       </div>
                       <span className="text-muted-foreground">{item.text}</span>
                     </li>
@@ -440,7 +440,7 @@ export default $config({
                       className="flex items-start gap-3"
                     >
                       <div className="flex-shrink-0 h-6 w-6 rounded-full bg-foreground text-background flex items-center justify-center mt-0.5">
-                        {item.icon}
+                        <div className="scale-75">{item.icon}</div>
                       </div>
                       <span>{item.text}</span>
                     </motion.li>

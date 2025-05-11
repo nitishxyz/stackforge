@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { TbBrandOpenai } from "react-icons/tb";
 import { SiNextdotjs, SiDrizzle, SiExpo, SiBun, SiZod } from "react-icons/si";
+import { PolarIcon } from "@/components/assets/icons/polar";
 
 export function FeaturesSection() {
   const features = [
@@ -45,8 +46,20 @@ export function FeaturesSection() {
       icon: <SiBun size={40} className="mb-4" />,
     },
     {
+      title: "Polar Payments",
+      description:
+        "Built-in subscription and payment infrastructure for monetization",
+      gradient: "from-indigo-500/20 via-indigo-300/20 to-indigo-400/20",
+      emoji: "💸",
+      icon: (
+        <div className="w-10 h-10 mb-4 flex items-center justify-center">
+          <PolarIcon width={32} height={32} />
+        </div>
+      ),
+    },
+    {
       title: "Coming Soon",
-      description: "Telegram bot (ECS), webhooks (Lambda), and Polar payments",
+      description: "Telegram bot (ECS) and webhooks (Lambda) integrations",
       gradient: "from-cyan-500/20 via-cyan-300/20 to-cyan-400/20",
       emoji: "🚀",
       icon: <SiZod size={40} className="mb-4" />,
