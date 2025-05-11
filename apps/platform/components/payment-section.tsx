@@ -79,7 +79,7 @@ const PricingTier = ({
         ) : (
           <button
             className={`w-full inline-flex justify-center items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium bg-foreground/10 hover:bg-foreground/20 transition-colors`}
-            onClick={() => window.open("mailto:contact@example.com", "_blank")}
+            onClick={() => window.open("mailto:nitishxyz@proton.me", "_blank")}
           >
             Contact Us
             <ArrowRight className="h-4 w-4" />
@@ -96,12 +96,13 @@ export function PaymentsSection() {
       id: "community",
       title: "Community",
       price: "Free",
-      description: "Support the project through GitHub contributions",
+      description: "Free to use for any personal or commercial project",
       features: [
         "Access to documentation",
         "GitHub issue support",
         "Community Discord",
-        "Use in personal projects",
+        "Use in any type of project",
+        "No license restrictions",
       ],
       polar: {
         url: "https://github.com/nitishxyz/stackforge",
@@ -130,13 +131,13 @@ export function PaymentsSection() {
       id: "enterprise",
       title: "Enterprise",
       price: "$99",
-      description: "For companies using StackForge in production",
+      description: "For teams wanting priority support and guidance",
       features: [
         "All Sponsor features",
         "Dedicated support channel",
         "Private support hours (2hr/month)",
         "Priority bugfixes",
-        "Commercial use license",
+        "Advanced implementation guidance",
       ],
       polar: {
         url: `checkout?products=${getProductById("enterprise")?.polar_id}`,
@@ -193,7 +194,8 @@ export function PaymentsSection() {
             <h2 className="text-4xl font-bold">Support Options</h2>
           </div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mt-4">
-            Support ongoing development and unlock additional benefits.
+            StackForge is free to use for any project. Consider supporting to
+            help ongoing development.
           </p>
         </motion.div>
 

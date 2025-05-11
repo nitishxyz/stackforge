@@ -7,7 +7,7 @@ COPY apps/api/ apps/api
 COPY packages/core/ packages/core
 
 
-RUN bun install
+RUN bun install --frozen-lockfile
 
 
 EXPOSE 3030
