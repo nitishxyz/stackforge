@@ -28,7 +28,6 @@ declare module "sst" {
     }
     "ForgePlatform": {
       "type": "sst.aws.Nextjs"
-      "url": string
     }
     "FrogeVpc": {
       "bastion": string

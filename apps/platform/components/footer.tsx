@@ -1,7 +1,8 @@
 "use client";
 
-import { FaAws } from "react-icons/fa";
+import { FaAws, FaDiscord } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
+import { RiTwitterXFill } from "react-icons/ri";
 import { SstIcon } from "@/components/assets/icons/sst";
 
 export function Footer() {
@@ -25,6 +26,24 @@ export function Footer() {
               aria-label="GitHub"
             >
               <SiGithub size={24} />
+            </a>
+            <a
+              href="https://x.com/thebatdev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+              aria-label="X (Twitter)"
+            >
+              <RiTwitterXFill size={24} />
+            </a>
+            <a
+              href="https://discord.gg/pCX7DgcZJh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+              aria-label="Discord"
+            >
+              <FaDiscord size={24} />
             </a>
             <a
               href="https://sst.dev"
