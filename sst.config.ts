@@ -38,4 +38,18 @@ export default $config({
       databasePort: database.port,
     };
   },
+  console: {
+    autodeploy: {
+      target(event) {
+        // Only deploy to prod when the main branch is pushed
+        if (
+          event.type === "branch" &&
+          event.branch === "main" &&
+          event.action === "pushed"
+        ) {
+          return { stage: "prod" };
+        }
+      },
+    },
+  },
 });
