@@ -108,7 +108,7 @@ export function ArchitectureSection() {
                       className="flex items-start gap-3"
                     >
                       <div className="flex-shrink-0 h-6 w-6 rounded-full bg-foreground text-background flex items-center justify-center mt-0.5">
-                        {item.icon}
+                        <div className="scale-75">{item.icon}</div>
                       </div>
                       <span>{item.text}</span>
                     </motion.li>
@@ -189,7 +189,7 @@ export function ArchitectureSection() {
                         }}
                         className="absolute flex items-center justify-center h-12 w-12 rounded-full bg-background shadow-lg"
                       >
-                        {service.icon}
+                        <div className="scale-90">{service.icon}</div>
                       </motion.div>
                     ))}
                   </div>
