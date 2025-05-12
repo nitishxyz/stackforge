@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "StackForge",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://stackforge.xyz/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "StackForge - SST Template Stack",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "StackForge - Build. Deploy. Scale.",
     description:
       "A comprehensive monorepo template for building modern full-stack applications with SST, Next.js, Expo, and Bun.",
-    images: ["/og-image.jpg"],
+    images: ["https://stackforge.xyz/og-image.jpg"],
   },
   icons: {
     icon: [
