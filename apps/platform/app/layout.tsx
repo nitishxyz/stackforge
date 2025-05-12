@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://stackforge.com",
+    url: "https://stackforge.xyz",
     title: "StackForge - Build. Deploy. Scale.",
     description:
       "A comprehensive monorepo template for building modern full-stack applications with SST, Next.js, Expo, and Bun.",
